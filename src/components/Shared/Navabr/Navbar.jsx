@@ -1,15 +1,22 @@
-import React from 'react';
+
+import { useContext } from 'react';
+import { Link } from 'react-router-dom';
+import { AuthContext } from '../../../Providers/AuthProvider';
+
 
 
 const Navbar = () => {
-
+ const {user}=useContext(AuthContext)
     const navItem = <>
-        <li><a></a></li>
-        <li><a>Item 3</a></li>
-        {/* {user ? <><li> <button onClick={handleLogout}>Log out <span className='text-red-500'>{user.email}</span></button ></li>
+        <li><Link to='/'>Home</Link></li>
+        <li><Link to='/'>All Toys</Link></li>
+        <li><Link to='/'>My Toys</Link></li>
+        <li><Link to='/'>Blogs</Link></li>
+
+        {user ? <><li> <button onClick={handleLogout}>Log out <span className='text-red-500'>{user.email}</span></button ></li>
             <li> <Link to="/bookings">My bookings</Link></li>
         </>
-            : <li> <Link to="/login">Login</Link></li>} */}
+            : <li> <Link to="/login">Login</Link></li>}
     </>
 
     return (
@@ -20,18 +27,22 @@ const Navbar = () => {
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                     </label>
                     <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
-                            {navItem}
+                        {navItem}
                     </ul>
                 </div>
                 <img src="https://i.ibb.co/4MXFmJj/Red-blue-illustration-Kids-Toys-logo.png" alt="" className='max-w-sm w-28' />
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
-                   {navItem}
+                    {navItem}
                 </ul>
             </div>
             <div className="navbar-end">
-                <a className="btn">Button</a>
+                <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+                    <div className="w-10 rounded-full">
+                        <img src="https://i.ibb.co/4MXFmJj/Red-blue-illustration-Kids-Toys-logo.png" />
+                    </div>
+                </label>
             </div>
         </div>
     );
