@@ -16,9 +16,10 @@ const Navbar = () => {
         <li><Link to='/'>All Toys</Link></li>
         <li><Link to='/'>Blogs</Link></li>
 
-        {user ? <><li> <button onClick={handleLogout}>Log out <span className='text-red-500'>{user.email}</span></button ></li>
+        {user ? <>
         <li><Link to='/'>Add a Toy</Link></li>
         <li><Link to='/'>My Toys</Link></li>
+        <li> <button onClick={handleLogout}>Log out <span className='text-red-500'>{user.email}</span></button ></li>
         </>
             : <li> <Link to="/login">Login</Link></li>}
     </>
@@ -44,7 +45,7 @@ const Navbar = () => {
             <div className="navbar-end">
                 <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
                     <div className="w-10 rounded-full">
-                        <img src="https://i.ibb.co/4MXFmJj/Red-blue-illustration-Kids-Toys-logo.png" />
+                      {user&& <img src={user.photoURL} title={user.displayName} />}
                     </div>
                 </label>
             </div>

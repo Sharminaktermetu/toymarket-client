@@ -1,25 +1,39 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Providers/AuthProvider';
+import { updateProfile } from 'firebase/auth';
 
 const Signup = () => {
     const {createUser}=useContext(AuthContext);
-
+    const navigate =useNavigate()
+    const [error, setError] = useState('')
 const handleSignUp =event=>{
     event.preventDefault();
     const form =event.target;
     const name =form.name.value;
     const email=form.email.value;
     const password =form.password.value;
-    console.log(name,email,password);
+    const photo =form.photo.value;
+    setError('')
+    if (password.length < 6) {
+      setError("Password must be 6 charecter")
+      return;
+    }
+    console.log(name,email,password,photo);
     createUser(email,password)
-    .then(result=>{
-        const user =result.user;
-        console.log(user);
+    .then(async (result) => {
+      
+      const loggedUser = result.user;
+    await updateProfile(loggedUser,{
+        displayName:form.name.value,
+        photoURL:form.photo.value,
+        
+      })
+      navigate("/")
     })
     .catch(error=>{
-        console.log(error);
+      setError("Check mail again")
     })
 
 }
@@ -30,6 +44,7 @@ const handleSignUp =event=>{
           <div>
            {/* <img src={login} alt="" /> */}
           </div>
+          {error && <div className="text-red-500 font-bold text-center">{error}</div>}
          <form onSubmit={handleSignUp}>
          <div className="card max-w-sm shadow-2xl p-6">
             <div className="card-body">
@@ -37,19 +52,26 @@ const handleSignUp =event=>{
                 <label className="label">
                   <span className="label-text">Name</span>
                 </label>
-                <input type="text" placeholder="name" name='name' className="input input-bordered" />
+                <input type="text" placeholder="name" name='name' className="input input-bordered" required/>
               </div>
               <div className="form-control">
                 <label className="label">
                   <span className="label-text">Email</span>
                 </label>
-                <input type="text" placeholder="email" name='email' className="input input-bordered" />
+                <input type="text" placeholder="email" name='email' className="input input-bordered" required/>
               </div>
               <div className="form-control">
                 <label className="label">
                   <span className="label-text">Password</span>
                 </label>
-                <input type="password" placeholder="password" name='password' className="input input-bordered" />
+                <input type="password" placeholder="password" name='password' className="input input-bordered" required/>
+             
+              </div>
+              <div className="form-control">
+                <label className="label">
+                  <span className="label-text">Photo</span>
+                </label>
+                <input type="text" placeholder="Photo Url" name='photo' className="input input-bordered" required/>
              
               </div>
               <div className="form-control mt-6">

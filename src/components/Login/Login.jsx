@@ -1,11 +1,11 @@
 import React, { useContext } from 'react';
 
 import { Link, useLocation, useNavigate } from 'react-router-dom';
- import { FaFacebookF,FaLinkedinIn,FaGoogle } from "react-icons/fa";
+ import { FaFacebookF,FaGoogle } from "react-icons/fa";
 import { AuthContext } from '../../Providers/AuthProvider';
 
 const Login = () => {
-    const {login} = useContext(AuthContext)
+    const {login,googleSign} = useContext(AuthContext)
     const location =useLocation()
     const navigate =useNavigate()
     let from = location.state?.from?.pathname || "/";
@@ -25,6 +25,16 @@ const Login = () => {
             console.log(error);
         })
     
+    }
+    const handlegoogle=()=>{
+      googleSign()
+      
+      .then(result=>{
+        const user =result.user;
+        console.log(user);
+        navigate(from, { replace: true });
+      })
+      .catch(error=>{console.log(error)})
     }
 
 
@@ -57,8 +67,10 @@ const Login = () => {
               <p className='text-center my-2'>  or sign in with </p>
               <div className='text-center flex flex-row gap-7 m-auto'>
                     <FaFacebookF></FaFacebookF>
-                    <FaLinkedinIn></FaLinkedinIn>
+                  <p onClick={handlegoogle}>
+
                     <FaGoogle></FaGoogle>
+                  </p>
               </div>
         
               <small>New to car Doctor? <Link to="/signup" className='btn btn-link'>Signup</Link></small>
