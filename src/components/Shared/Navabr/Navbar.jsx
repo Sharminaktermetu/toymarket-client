@@ -13,11 +13,11 @@ const Navbar = () => {
 
     const navItem = <>
         <li><Link to='/'>Home</Link></li>
-        <li><Link to='/'>All Toys</Link></li>
+        <li><Link to='/alltoys'>All Toys</Link></li>
         <li><Link to='/'>Blogs</Link></li>
 
         {user ? <>
-        <li><Link to='/'>Add a Toy</Link></li>
+        <li><Link to='/addatoy'>Add a Toy</Link></li>
         <li><Link to='/'>My Toys</Link></li>
         <li> <button onClick={handleLogout}>Log out <span className='text-red-500'>{user.email}</span></button ></li>
         </>
