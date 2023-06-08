@@ -21,7 +21,8 @@ const Addatoy = () => {
         subCategory,
         price,
         rating,
-        quantity
+        quantity,
+        description
      }
      console.log(addedToy);
     // form.reset()

@@ -47,7 +47,9 @@ const MyToys = () => {
               }
             });
           };
-          
+      const handleUpdate=()=>{
+
+      }
 
     return (
         <div>
@@ -64,13 +66,20 @@ const MyToys = () => {
         <th>Sub Catagory</th>
         <th>Seller Email</th>
         <th>Rating</th>
-
+        <th>Price</th>
 
       </tr>
     </thead>
     <tbody>
       {/* row 1 */}
-      {toys.map(toy=><MyToysRow key={toy._id} toy={toy} handleDelete={handleDelete}></MyToysRow>)}
+      {toys.map(toy=><MyToysRow 
+      key={toy._id} 
+      toy={toy} 
+      handleDelete={handleDelete}
+      handleUpdate={handleUpdate}
+      >
+
+      </MyToysRow>)}
 
     </tbody>
 

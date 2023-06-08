@@ -1,6 +1,7 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-const MyToysRow = ({ toy,handleDelete }) => {
+const MyToysRow = ({ toy,handleDelete,handleUpdate}) => {
     console.log(toy);
     const {
         pictureUrl,
@@ -36,9 +37,11 @@ const MyToysRow = ({ toy,handleDelete }) => {
             <td>{subCategory}</td>
             <td>{sellerEmail}</td>
             <td>{rating}</td>
+            <td>{price}</td>
 
             <th>
-                <button className="btn btn-info btn-xs">Update</button>
+            <Link to={`/update/${_id}`}><button className='btn btn-success'>Edit</button>
+            </Link>
             </th>
         </tr>
     );
