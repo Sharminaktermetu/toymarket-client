@@ -1,4 +1,5 @@
 import React from 'react';
+import Swal from 'sweetalert2';
 
 const Addatoy = () => {
     const handleSubmit=(event)=>{
@@ -23,7 +24,7 @@ const Addatoy = () => {
         quantity
      }
      console.log(addedToy);
-     form.reset()
+    // form.reset()
      fetch('http://localhost:5000/toy',{
         method:'POST',
         headers:{'content-type':'application/json'},
@@ -31,7 +32,14 @@ const Addatoy = () => {
      })
      .then(res=>res.json())
      .then(data=>{
-        console.log(data);
+       if (data.insertedId) {
+        Swal.fire({
+            icon: 'success',
+            title: 'You added a toy',
+            showConfirmButton: false,
+            timer: 1500
+          })
+       }
      })
     }
     return (
@@ -78,7 +86,7 @@ const Addatoy = () => {
             <textarea id="description" name="description" className="border rounded px-2 py-1 w-full" rows="4"></textarea>
           </div>
           <div className=''>
-          <button type="submit" className="bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-4 btn btn-block rounded">Submit</button>
+          <button type="submit" className="btn btn-error text-white font-medium py-2 px-4  btn-block rounded">Submit</button>
           </div>
         </form>
       </div>

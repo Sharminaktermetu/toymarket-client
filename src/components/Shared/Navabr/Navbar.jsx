@@ -35,7 +35,9 @@ const Navbar = () => {
                         {navItem}
                     </ul>
                 </div>
-                <img src="https://i.ibb.co/4MXFmJj/Red-blue-illustration-Kids-Toys-logo.png" alt="" className='max-w-sm w-28' />
+             <Link to='/'>
+             <img src="https://i.ibb.co/4MXFmJj/Red-blue-illustration-Kids-Toys-logo.png" alt="" className='max-w-sm w-28' />
+             </Link>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
