@@ -1,7 +1,34 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { Link } from 'react-router-dom';
+import { AuthContext } from '../../Providers/AuthProvider';
+import Swal from 'sweetalert2';
 
 const Toy = ({toy}) => {
-  const {Seller}=toy
+  const {user}= useContext(AuthContext)
+  const { 
+    pictureUrl,
+    name,
+    sellerName,
+    sellerEmail,
+    subCategory,
+    price,
+    rating,
+    quantity,
+    _id
+  }=toy
+  const handleDetails=()=>{
+    if (!user) {
+      Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'Log In first to view details!',
+      })
+      
+    }
+    
+   
+  }
+ 
     return (
       <tr>
       <th>
@@ -11,25 +38,21 @@ const Toy = ({toy}) => {
       </th>
       <td>
         <div className="flex items-center space-x-3">
-          <div className="avatar">
-            <div className="mask mask-squircle w-12 h-12">
-              <img src="/tailwind-css-component-profile-2@56w.png" alt="Avatar Tailwind CSS Component" />
-            </div>
-          </div>
+          
           <div>
-            <div className="font-bold">Hart Hagerty</div>
-            <div className="text-sm opacity-50">United States</div>
+            <div className="font-bold">{name}</div>
+            <div className="text-sm opacity-50">{sellerName}</div>
           </div>
         </div>
       </td>
-      <td>
-        Zemlak, Daniel and Leannon
-        <br/>
-        <span className="badge badge-ghost badge-sm">Desktop Support Technician</span>
-      </td>
-      <td>Purple</td>
+      
+      <td>{subCategory}</td>
+      <td>${price}</td>
+      <td>{quantity}</td>
       <th>
-        <button className="btn btn-ghost btn-xs">details</button>
+       <Link to={`/details/${_id}`}>
+       <button onClick={()=>handleDetails(_id)}className="btn btn-ghost btn-xs">details</button>
+       </Link>
       </th>
     </tr>
     );

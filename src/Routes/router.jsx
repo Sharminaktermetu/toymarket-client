@@ -7,6 +7,9 @@ import Login from '../components/Login/Login';
 import Signup from '../components/Signup/Signup';
 import Alltoys from '../components/Alltoys/Alltoys';
 import Addatoy from '../components/AddaToy/Addatoy';
+import ToyDetails from '../components/Alltoys/ToyDetails';
+import PrivateRoute from './PrivateRoute';
+import MyToys from '../components/MyToys/MyToys';
 
   const router = createBrowserRouter([
     {
@@ -32,8 +35,17 @@ import Addatoy from '../components/AddaToy/Addatoy';
       },
         {
         path:'/addatoy',
-        element:<Addatoy></Addatoy>
+        element:<PrivateRoute><Addatoy></Addatoy></PrivateRoute>
       },
+        {
+        path:'/details/:id',
+        element:<PrivateRoute><ToyDetails></ToyDetails></PrivateRoute>,
+        loader:({params})=>fetch(`http://localhost:5000/toy/${params.id}`)
+      },
+      {
+        path:'/mytoys',
+        element:<PrivateRoute><MyToys></MyToys></PrivateRoute>
+      }
     
     ]
     },

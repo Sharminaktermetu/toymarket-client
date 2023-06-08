@@ -6,7 +6,7 @@ const Addatoy = () => {
         event.preventDefault();
      const form =event.target;
      const pictureUrl =form.pictureUrl.value;
-     const name =form.name.value;
+     const toyname =form.toyname.value;
      const sellerName =form.sellerName.value;
      const sellerEmail =form.sellerEmail.value;
      const subCategory =form.subCategory.value;
@@ -15,7 +15,7 @@ const Addatoy = () => {
      const quantity =form.quantity.value;
      const addedToy ={
         pictureUrl,
-        name,
+        toyname,
         sellerName,
         sellerEmail,
         subCategory,
@@ -52,8 +52,8 @@ const Addatoy = () => {
             <input type="text" id="pictureUrl" name="pictureUrl" className="border rounded px-2 py-1 input input-bordered w-full" />
           </div>
           <div className="mb-4">
-            <label htmlFor="name" className="block font-medium">Name</label>
-            <input type="text" id="name" name="name" className="border rounded px-2 py-1 input input-bordered w-full" />
+            <label htmlFor="toyname" className="block font-medium">Toy Name</label>
+            <input type="text" id="toyname" name="toyname" className="border rounded px-2 py-1 input input-bordered w-full" />
           </div>
           <div className="mb-4">
             <label htmlFor="sellerName" className="block font-medium">Seller Name</label>
