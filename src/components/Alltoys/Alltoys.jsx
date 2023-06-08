@@ -21,11 +21,7 @@ const Alltoys = () => {
     {/* head */}
     <thead>
       <tr>
-        <th>
-          <label>
-            <input type="checkbox" className="checkbox" />
-          </label>
-        </th>
+        
         <th>Name</th>
         <th>Job</th>
         <th>Favorite Color</th>

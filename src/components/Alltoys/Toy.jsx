@@ -31,19 +31,14 @@ const Toy = ({toy}) => {
  
     return (
       <tr>
-      <th>
-        <label>
-          <input type="checkbox" className="checkbox" />
-        </label>
-      </th>
+      
       <td>
-        <div className="flex items-center space-x-3">
-          
+        
           <div>
             <div className="font-bold">{name}</div>
             <div className="text-sm opacity-50">{sellerName}</div>
           </div>
-        </div>
+      
       </td>
       
       <td>{subCategory}</td>
@@ -51,7 +46,7 @@ const Toy = ({toy}) => {
       <td>{quantity}</td>
       <th>
        <Link to={`/details/${_id}`}>
-       <button onClick={()=>handleDetails(_id)}className="btn btn-ghost btn-xs">details</button>
+       <button onClick={()=>handleDetails(_id)}className="btn btn-info btn-xs ">details</button>
        </Link>
       </th>
     </tr>
