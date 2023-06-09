@@ -10,13 +10,13 @@ import Steps from './Steps';
 const Home = () => {
     return (
         <>
-       <div className='w-9/12 mx-auto'>
+       
             <Banner></Banner>
             <GallerySection></GallerySection>
             <Brands></Brands>
             <Steps></Steps>
             {/* <MyTabsComponent></MyTabsComponent> */}
-        </div>
+       
         
          </>
     );

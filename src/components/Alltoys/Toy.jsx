@@ -7,7 +7,7 @@ const Toy = ({toy}) => {
   const {user}= useContext(AuthContext)
   const { 
     pictureUrl,
-    name,
+    toyname,
     sellerName,
     sellerEmail,
     subCategory,
@@ -35,8 +35,8 @@ const Toy = ({toy}) => {
       <td>
         
           <div>
-            <div className="font-bold">{name}</div>
-            <div className="text-sm opacity-50">{sellerName}</div>
+            <div className="font-bold">{toyname}</div>
+            <div className="text-sm">{sellerName}</div>
           </div>
       
       </td>

@@ -22,10 +22,10 @@ const Alltoys = () => {
     <thead>
       <tr>
         
-        <th>Name</th>
-        <th>Job</th>
-        <th>Favorite Color</th>
-        <th></th>
+        <th>Seller Name</th>
+        <th>Toy Name</th>
+        <th>Price</th>
+        <th>Quantity</th>
       </tr>
     </thead>
     <tbody>

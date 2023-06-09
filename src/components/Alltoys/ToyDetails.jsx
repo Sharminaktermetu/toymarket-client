@@ -4,7 +4,7 @@ import { Link, useLoaderData } from 'react-router-dom';
 const ToyDetails = () => {
   const data = useLoaderData()
   const { pictureUrl,
-    name,
+    toyname,
     sellerName,
     sellerEmail,
     subCategory,
@@ -16,11 +16,12 @@ const ToyDetails = () => {
     <div className="card card-side bg-base-100 shadow-xl">
       <figure><img src={pictureUrl} alt="Movie" /></figure>
       <div className="card-body">
-        <h2 className="card-title">{sellerName}</h2>
-        <p>{name}</p>
-        <p>{rating}</p>
-        <p>{quantity}</p>
-        <p>{subCategory}</p>
+        <h2 className="card-title">Seller name: {sellerName}</h2>
+        <p>Name of the Toy: {toyname}</p>
+        <p>Prodict Rating: {rating}</p>
+        <p>Available Quantity: {quantity}</p>
+        <p>Price: ${price}</p>
+        <p>Sub-category: {subCategory}</p>
         <div className="card-actions justify-end">
           <Link to='/alltoys'>
           <button className="btn btn-error">Back</button>
