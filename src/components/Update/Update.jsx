@@ -21,7 +21,7 @@ const Update = () => {
            
         }
         console.log(updatedToy);
-        fetch(`http://localhost:5000/toy/${_id}`,{
+        fetch(`https://tiny-toy-town-server-adsmarketersaif13-gmailcom.vercel.app/toy/${_id}`,{
           method: 'PUT',
           headers: {
             'content-type':

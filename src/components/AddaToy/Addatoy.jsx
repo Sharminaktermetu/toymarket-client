@@ -27,7 +27,7 @@ const Addatoy = () => {
     }
     console.log(addedToy);
     // form.reset()
-    fetch('http://localhost:5000/toy', {
+    fetch('https://tiny-toy-town-server-adsmarketersaif13-gmailcom.vercel.app/toy', {
       method: 'POST',
       headers: { 'content-type': 'application/json' },
       body: JSON.stringify(addedToy)

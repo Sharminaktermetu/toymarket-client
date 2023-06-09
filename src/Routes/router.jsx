@@ -41,7 +41,7 @@ import Update from '../components/Update/Update';
         {
         path:'/details/:id',
         element:<PrivateRoute><ToyDetails></ToyDetails></PrivateRoute>,
-        loader:({params})=>fetch(`http://localhost:5000/toy/${params.id}`)
+        loader:({params})=>fetch(`https://tiny-toy-town-server-adsmarketersaif13-gmailcom.vercel.app/toy/${params.id}`)
       },
       {
         path:'/mytoys',
@@ -50,7 +50,7 @@ import Update from '../components/Update/Update';
       {
         path:'/update/:id',
         element:<Update></Update>,
-        loader:({params})=>fetch(`http://localhost:5000/toy/${params.id}`)
+        loader:({params})=>fetch(`https://tiny-toy-town-server-adsmarketersaif13-gmailcom.vercel.app/toy/${params.id}`)
       }
     
     ]
