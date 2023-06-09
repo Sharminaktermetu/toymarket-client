@@ -11,6 +11,7 @@ import ToyDetails from '../components/Alltoys/ToyDetails';
 import PrivateRoute from './PrivateRoute';
 import MyToys from '../components/MyToys/MyToys';
 import Update from '../components/Update/Update';
+import View from '../components/Home/Tabs/View';
 
   const router = createBrowserRouter([
     {
@@ -51,6 +52,12 @@ import Update from '../components/Update/Update';
         path:'/update/:id',
         element:<Update></Update>,
         loader:({params})=>fetch(`https://tiny-toy-town-server-adsmarketersaif13-gmailcom.vercel.app/toy/${params.id}`)
+      },
+      {
+        path:'/view/:id',
+        element:<PrivateRoute><View></View></PrivateRoute>,
+        loader:({params})=> fetch(`http://localhost:5000/tabs/${params.id}`)
+
       }
     
     ]

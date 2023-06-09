@@ -1,119 +1,57 @@
 [
     {
-      "category": "Sports car",
-      "subCategories": [
-        {
-          "name": "Math Toys",
-          "toys": [
-            {
-              "name": "Math Toy 1",
-              "price": 19.99,
-              "rating": 4.5,
-              "image": "https://www.shutterstock.com/image-illustration/this-beautiful-car-toy-your-260nw-1966098811.jpg"
-            },
-            {
-              "name": "Math Toy 2",
-              "price": 24.99,
-              "rating": 4.2,
-              "image": "https://www.shutterstock.com/image-illustration/this-beautiful-car-toy-your-260nw-1966098811.jpg"
-            }
-          ]
-        },
-        {
-          "name": "Language Toys",
-          "toys": [
-            {
-              "name": "Language Toy 1",
-              "price": 14.99,
-              "rating": 4.7,
-              "image": "https://5.imimg.com/data5/SELLER/Default/2021/7/TE/RG/JA/61594312/car-toy.jpg"
-            },
-            {
-              "name": "Language Toy 2",
-              "price": 21.99,
-              "rating": 4.4,
-              "image": "https://5.imimg.com/data5/SELLER/Default/2021/7/TE/RG/JA/61594312/car-toy.jpg"
-            }
-          ]
-        }
-      ]
+      "category": "Sports Car",
+      "name": "Toy 1",
+      "sellerName": "John Smith",
+      "subcategory": "Sports Subcategory 1",
+      "price": 19.99,
+      "image": "https://m.media-amazon.com/images/I/71eGMZYPXhS._AC_SL1500_.jpg",
+      "description": "Experience the thrill of speed with Toy 1, a sleek and powerful sports car. This toy features realistic design and smooth handling, providing endless hours of fun for car enthusiasts of all ages."
     },
     {
-      "category": "Regular Car",
-      "subCategories": [
-        {
-          "name": "Math Toys",
-          "toys": [
-            {
-              "name": "Math Toy 1",
-              "price": 19.99,
-              "rating": 4.5,
-              "image": "https://img.freepik.com/free-vector/pink-sports-car-pink-background-vector_53876-64415.jpg"
-            },
-            {
-              "name": "Math Toy 2",
-              "price": 24.99,
-              "rating": 4.2,
-              "image": "https://www.shutterstock.com/image-illustration/this-beautiful-car-toy-your-260nw-1966098811.jpg"
-            }
-          ]
-        },
-        {
-          "name": "Language Toys",
-          "toys": [
-            {
-              "name": "Language Toy 1",
-              "price": 14.99,
-              "rating": 4.7,
-              "image": "https://5.imimg.com/data5/SELLER/Default/2021/7/TE/RG/JA/61594312/car-toy.jpg"
-            },
-            {
-              "name": "Language Toy 2",
-              "price": 21.99,
-              "rating": 4.4,
-              "image": "https://5.imimg.com/data5/SELLER/Default/2021/7/TE/RG/JA/61594312/car-toy.jpg"
-            }
-          ]
-        }
-      ]
+      "category": "Sports Car",
+      "name": "Toy 2",
+      "sellerName": "Emily Johnson",
+      "subcategory": "Sports Subcategory 2",
+      "price": 24.99,
+      "image": "https://static-01.daraz.com.bd/p/69f7bfd60b474845bdcc0adbcf9946b2.jpg",
+      "description": "Get ready for high-octane adventures with Toy 2, a dynamic sports car. With its striking appearance and precision engineering, this toy delivers an exhilarating driving experience that will leave you wanting more."
     },
     {
-      "category": "Mini police car",
-      "subCategories": [
-        {
-          "name": "Building Blocks",
-          "toys": [
-            {
-              "name": "Building Block Set 1",
-              "price": 29.99,
-              "rating": 4.8,
-              "image": "https://5.imimg.com/data5/SELLER/Default/2021/7/TE/RG/JA/61594312/car-toy.jpg"
-            },
-            {
-              "name": "Building Block Set 2",
-              "price": 34.99,
-              "rating": 4.6,
-              "image": "https://5.imimg.com/data5/SELLER/Default/2021/7/TE/RG/JA/61594312/car-toy.jpg"
-            }
-          ]
-        },
-        {
-          "name": "Robotic Kits",
-          "toys": [
-            {
-              "name": "Robotic Kit 1",
-              "price": 39.99,
-              "rating": 4.3,
-              "image": "https://i.etsystatic.com/10849216/r/il/7e8367/2455695056/il_fullxfull.2455695056_g2h7.jpg"
-            },
-            {
-              "name": "Robotic Kit 2",
-              "price": 36.99,
-              "rating": 4.1,
-              "image": "https://i.etsystatic.com/10849216/r/il/7e8367/2455695056/il_fullxfull.2455695056_g2h7.jpg"
-            }
-          ]
-        }
-      ]
+      "category": "Regular car",
+      "name": "Toy 3",
+      "sellerName": "Michael Anderson",
+      "subcategory": "Regular Subcategory 1",
+      "price": 14.99,
+      "image": "https://m.media-amazon.com/images/I/71k5-Q33TbS.jpg",
+      "description": "Cruise in style with Toy 3, a classic regular car that combines timeless design with modern features. Take it for a spin and enjoy the comfort, reliability, and elegance it offers."
+    },
+    {
+      "category": "Regular car",
+      "name": "Toy 4",
+      "sellerName": "Sophia Davis",
+      "subcategory": "Regular Subcategory 2",
+      "price": 14.99,
+      "image": "https://m.media-amazon.com/images/I/71k5-Q33TbS.jpg",
+      "description": "Experience the joy of driving with Toy 4, a versatile regular car that offers great performance and fuel efficiency. It's perfect for everyday commutes and family outings."
+    },
+    {
+      "category": "Police car",
+      "name": "Toy 5",
+      "sellerName": "Daniel Wilson",
+      "subcategory": "Police Subcategory 1",
+      "price": 14.99,
+      "image": "https://secure.img1-cg.wfcdn.com/im/50307858/resize-h310-w310%5Ecompr-r85/1210/121003910/kids-ride-on-police-car.jpg",
+      "description": "Enforce the law and maintain order with Toy 5, an exciting police car that comes with lights and sounds. Let your imagination run wild as you play the role of a brave police officer keeping the streets safe."
+    },
+    {
+      "category": "Police car",
+      "name": "Toy 6",
+      "sellerName": "Olivia Thompson",
+      "subcategory": "Police Subcategory 2",
+      "price": 14.99,
+      "image": "https://i5.walmartimages.com/asr/8b7270cd-3d8a-4ccb-9551-64e11738042f.8b94111819ef76d8c027814781543721.jpeg",
+      "description": "Join the police force and embark on thrilling missions with Toy 6, a realistic police car equipped with all the necessary gadgets. Chase down criminals and bring them to justice in this action-packed toy."
     }
   ]
+  
