@@ -4,14 +4,21 @@ import { Tab, Tabs } from 'react-tabs';
 
 import GallerySection from './GallerySection';
 import MyTabsComponent from './Tabs/MyTabsComponent ';
+import Brands from './Brands';
+import Steps from './Steps';
 
 const Home = () => {
     return (
-        <div>
+        <>
+       <div className='w-9/12 mx-auto'>
             <Banner></Banner>
             <GallerySection></GallerySection>
-            <MyTabsComponent></MyTabsComponent>
+            <Brands></Brands>
+           
+            {/* <MyTabsComponent></MyTabsComponent> */}
         </div>
+        
+         </>
     );
 };
 

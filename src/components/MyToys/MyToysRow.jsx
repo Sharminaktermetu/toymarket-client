@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const MyToysRow = ({ toy,handleDelete,handleUpdate}) => {
+const MyToysRow = ({ toy,handleDelete}) => {
     console.log(toy);
     const {
         pictureUrl,
