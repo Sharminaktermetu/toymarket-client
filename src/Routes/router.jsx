@@ -56,7 +56,7 @@ import View from '../components/Home/Tabs/View';
       {
         path:'/view/:id',
         element:<PrivateRoute><View></View></PrivateRoute>,
-        loader:({params})=> fetch(`http://localhost:5000/tabs/${params.id}`)
+        loader:({params})=> fetch(`https://tiny-toy-town-server.vercel.app/tabs/${params.id}`)
 
       }
     

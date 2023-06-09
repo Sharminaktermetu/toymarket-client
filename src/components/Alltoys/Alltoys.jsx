@@ -6,7 +6,7 @@ const Alltoys = () => {
 
   useEffect(() => {
     // Fetch toy data from the server-side API endpoint
-    fetch('https://tiny-toy-town-server-adsmarketersaif13-gmailcom.vercel.app/toy')
+    fetch('https://tiny-toy-town-server.vercel.app/toy')
     .then(res=>res.json())
     .then(data=>{
         setToys(data)

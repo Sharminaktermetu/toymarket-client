@@ -8,7 +8,7 @@ const Brands = () => {
         <div className='w-1/2 mx-auto flex items-center justify-center'>
            <div>
            <h2 className='text-4xl text-start font-bold mb-4'>All my brands Shop this fan favorite Items</h2>
-            <button className='btn btn-error'>Show more</button>
+           
            </div>
         </div>
       <div>

@@ -8,7 +8,7 @@ const MyTabsComponent = () => {
   const [toyData, setToyData] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:5000/tabs')
+    fetch('https://tiny-toy-town-server.vercel.app/tabs')
       .then(res => res.json())
       .then(data => setToyData(data));
   }, []);
@@ -41,19 +41,19 @@ const MyTabsComponent = () => {
               if (toy.category === category) {
                 return (
                   <div key={index} className="border rounded-lg p-4 mb-4">
-                    <div className='grid'>
-                    <h3 className="text-lg font-semibold">{toy.name}</h3>
-                    <p>Seller: {toy.sellerName}</p>
-                    <p>Subcategory: {toy.subcategory}</p>
-                    <p>Price: ${toy.price}</p>
+                    <div className='grid font-semibold'>
+
+                      <p>Seller: {toy.sellerName}</p>
+                      <p>Subcategory: {toy.subcategory}</p>
+                      <p>Price: ${toy.price}</p>
                     </div>
-                    <img src={toy.image} alt={toy.name} className="w-1/4 mt-4 mx-auto"/>
+                    <img src={toy.image} alt={toy.name} className="w-1/4 mt-4 mx-auto" />
                     <div className='flex items-end justify-end'>
-                    <Link to={`/view/${toy._id}`}>
-                      <button onClick={() => handleButtonClick(toy)} className="btn btn-error btn-sm">
-                        Details
-                      </button>
-                    </Link>
+                      <Link to={`/view/${toy._id}`}>
+                        <button onClick={() => handleButtonClick(toy)} className="btn btn-error btn-sm">
+                          Details
+                        </button>
+                      </Link>
                     </div>
                   </div>
                 );

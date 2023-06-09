@@ -46,7 +46,7 @@ const Toy = ({toy}) => {
       <td>{quantity}</td>
       <th>
        <Link to={`/details/${_id}`}>
-       <button onClick={()=>handleDetails(_id)}className="btn btn-info btn-xs ">details</button>
+       <button onClick={()=>handleDetails(_id)}className="btn btn-error btn-xs ">details</button>
        </Link>
       </th>
     </tr>
