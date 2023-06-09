@@ -37,7 +37,7 @@ const MyToysRow = ({ toy,handleDelete}) => {
             <td>{subCategory}</td>
             <td>{sellerEmail}</td>
             <td>{rating}</td>
-            <td>{price}</td>
+            <td>${price}</td>
 
             <th>
             <Link to={`/update/${_id}`}><button className='btn btn-success'>Edit</button>

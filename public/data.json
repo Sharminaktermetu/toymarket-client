@@ -1,0 +1,77 @@
+{
+    "categories": [
+      {
+        "name": "Educational and Learning Toys",
+        "subCategories": [
+          {
+            "name": "Math Toys",
+            "toys": [
+              {
+                "name": "Math Toy 1",
+                "price": 19.99,
+                "rating": 4.5,
+                "image": "math-toy1.jpg"
+              },
+              {
+                "name": "Math Toy 2",
+                "price": 24.99,
+                "rating": 4.2,
+                "image": "math-toy2.jpg"
+              }
+            ]
+          },
+          {
+            "name": "Language Toys",
+            "toys": [
+              {
+                "name": "Language Toy 1",
+                "price": 14.99,
+                "rating": 4.7,
+                "image": "language-toy1.jpg"
+              },
+              {
+                "name": "Language Toy 2",
+                "price": 21.99,
+                "rating": 4.4,
+                "image": "language-toy2.jpg"
+              }
+            ]
+          },
+          {
+            "name": "Engineering Toys",
+            "toys": [
+              {
+                "name": "Engineering Toy 1",
+                "price": 29.99,
+                "rating": 4.8,
+                "image": "engineering-toy1.jpg"
+              },
+              {
+                "name": "Engineering Toy 2",
+                "price": 34.99,
+                "rating": 4.6,
+                "image": "engineering-toy2.jpg"
+              }
+            ]
+          },
+          {
+            "name": "Science Toys",
+            "toys": [
+              {
+                "name": "Science Toy 1",
+                "price": 25.99,
+                "rating": 4.3,
+                "image": "science-toy1.jpg"
+              },
+              {
+                "name": "Science Toy 2",
+                "price": 18.99,
+                "rating": 4.1,
+                "image": "science-toy2.jpg"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }

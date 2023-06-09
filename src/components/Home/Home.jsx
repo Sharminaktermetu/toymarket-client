@@ -15,8 +15,7 @@ const Home = () => {
             <GallerySection></GallerySection>
             <Brands></Brands>
             <Steps></Steps>
-            {/* <MyTabsComponent></MyTabsComponent> */}
-       
+            <MyTabsComponent></MyTabsComponent>
         
          </>
     );
