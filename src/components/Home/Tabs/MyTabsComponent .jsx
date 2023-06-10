@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Tab, TabList, TabPanel, Tabs } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
-
+import { Helmet } from 'react-helmet';
 const MyTabsComponent = () => {
   const [selectedTab, setSelectedTab] = useState(null);
   const [toyData, setToyData] = useState([]);
@@ -15,14 +15,15 @@ const MyTabsComponent = () => {
 
   const categories = [...new Set(toyData.map((toy) => toy.category))];
 
-  const handleTabClick = (category) => {
-    setSelectedTab(category);
-  };
+
 
 
 
   return (
     <div className="container mx-auto mt-8">
+       <Helmet>
+        <title>Tiny Toy | Home</title>
+      </Helmet>
       <div className="divider my-24"><p className='text-2xl font-bold'>Featured<span className='text-red-600 font-extrabold'> Subcategory </span>Products</p></div>
       <Tabs>
         <TabList className="flex justify-center">

@@ -3,6 +3,7 @@ import React, { useContext, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Providers/AuthProvider';
 import { updateProfile } from 'firebase/auth';
+import { Helmet } from 'react-helmet';
 
 const Signup = () => {
     const {createUser}=useContext(AuthContext);
@@ -40,6 +41,9 @@ const handleSignUp =event=>{
 
     return (
         <div className="hero min-h-screen">
+          <Helmet>
+        <title>Tiny Toy | Sign up</title>
+      </Helmet>
         <div className="hero-content flex-col lg:flex-row gap-20 m-0">
           <div>
            {/* <img src={login} alt="" /> */}

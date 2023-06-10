@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 import { Link, useLoaderData } from 'react-router-dom';
 
 const ToyDetails = () => {
@@ -14,6 +15,9 @@ const ToyDetails = () => {
     _id } = data
   return (
     <div className="card card-side bg-base-100 shadow-xl">
+      <Helmet>
+        <title>Tiny Toy | Details</title>
+      </Helmet>
       <figure><img src={pictureUrl} alt="Movie" /></figure>
       <div className="card-body">
         <h2 className="card-title">Seller name: {sellerName}</h2>

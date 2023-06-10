@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Toy from './Toy';
-
+import { Helmet } from 'react-helmet';
 const Alltoys = () => {
   const [toys, setToys] = useState([]);
   const [searchQuery, setSearchQuery] = useState('');
@@ -26,6 +26,9 @@ const Alltoys = () => {
 
   return (
     <div>
+       <Helmet>
+        <title>Tiny Toy | All Toys</title>
+      </Helmet>
       <div className="flex flex-col items-center">
         <div className='mb-8'>
         <input

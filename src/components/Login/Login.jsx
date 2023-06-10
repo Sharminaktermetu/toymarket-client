@@ -3,6 +3,7 @@ import React, { useContext } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
  import { FaFacebookF,FaGoogle } from "react-icons/fa";
 import { AuthContext } from '../../Providers/AuthProvider';
+import { Helmet } from 'react-helmet';
 
 const Login = () => {
     const {login,googleSign} = useContext(AuthContext)
@@ -40,6 +41,9 @@ const Login = () => {
 
     return (
         <div className="hero min-h-screen">
+          <Helmet>
+        <title>Tiny Toy | Log in</title>
+      </Helmet>
         <div className="hero-content flex-col lg:flex-row gap-20 m-0">
           <div className='rounded-lg'>
            <img src="https://i.pinimg.com/originals/d1/2a/6e/d12a6e88e902ffabd87c63791522cfd8.gif" alt="" className='rounded-lg'/>

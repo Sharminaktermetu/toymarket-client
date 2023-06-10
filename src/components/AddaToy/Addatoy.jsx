@@ -51,23 +51,23 @@ const Addatoy = () => {
         <div className='grid grid-cols-2 gap-8'>
           <div className="mb-4">
             <label htmlFor="pictureUrl" className="block font-medium">Picture URL of the toy</label>
-            <input type="text" id="pictureUrl" name="pictureUrl" className="border rounded px-2 py-1 input input-bordered w-full" />
+            <input type="text" id="pictureUrl" name="pictureUrl" className="border rounded px-2 py-1 input input-bordered w-full" required/>
           </div>
           <div className="mb-4">
             <label htmlFor="toyname" className="block font-medium">Toy Name</label>
-            <input type="text" id="toyname" name="toyname" className="border rounded px-2 py-1 input input-bordered w-full" />
+            <input type="text" id="toyname" name="toyname" className="border rounded px-2 py-1 input input-bordered w-full" required/>
           </div>
           <div className="mb-4">
             <label htmlFor="sellerName" className="block font-medium">Seller Name</label>
-            <input type="text" id="sellerName" name="sellerName" className="border rounded px-2 py-1 input input-bordered w-full" />
+            <input type="text" id="sellerName" name="sellerName" className="border rounded px-2 py-1 input input-bordered w-full" required/>
           </div>
           <div className="mb-4">
             <label htmlFor="sellerEmail" className="block font-medium">Seller Email</label>
-            <input type="email" id="sellerEmail" name="sellerEmail" className="border rounded px-2 py-1 input input-bordered w-full" />
+            <input type="email" id="sellerEmail" name="sellerEmail" className="border rounded px-2 py-1 input input-bordered w-full" required/>
           </div>
           <div className="mb-4">
             <label htmlFor="subCategory" className="block font-medium">Sub-category</label>
-            <select id="subCategory" name="subCategory" className="border rounded px-2 py-1 input input-bordered w-full">
+            <select id="subCategory" name="subCategory" className="border rounded px-2 py-1 input input-bordered w-full" required>
               <option value="sports-car" className="py-2">Sports Car</option>
               <option value="truck" className="py-2">Truck</option>
               <option value="regular-car" className="py-2">Regular Car</option>
@@ -79,21 +79,21 @@ const Addatoy = () => {
 
           <div className="mb-4">
             <label htmlFor="price" className="block font-medium">Price</label>
-            <input type="number" id="price" name="price" className="border rounded px-2 py-1 input input-bordered w-full" />
+            <input type="number" id="price" name="price" className="border rounded px-2 py-1 input input-bordered w-full" required/>
           </div>
           <div className="mb-4">
             <label htmlFor="rating" className="block font-medium">Rating</label>
-            <input type="number" id="rating" name="rating" max="5" min="0" className="border rounded px-2 py-1 input input-bordered w-full" />
+            <input type="number" id="rating" name="rating" max="5" min="0" className="border rounded px-2 py-1 input input-bordered w-full" required/>
           </div>
           <div className="mb-4">
             <label htmlFor="quantity" className="block font-medium">Available Quantity</label>
-            <input type="number" id="quantity" name="quantity" className="border rounded px-2 py-1 input input-bordered w-full" />
+            <input type="number" id="quantity" name="quantity" className="border rounded px-2 py-1 input input-bordered w-full" required/>
           </div>
 
         </div>
         <div className="mb-4">
           <label htmlFor="description" className="block font-medium">Detail Description</label>
-          <textarea id="description" name="description" className="border rounded px-2 py-1 w-full" rows="4"></textarea>
+          <textarea id="description" name="description" className="border rounded px-2 py-1 w-full" rows="4" required></textarea>
         </div>
         <div className=''>
           <button type="submit" className="btn btn-error text-white font-medium py-2 px-4  btn-block rounded">Submit</button>
