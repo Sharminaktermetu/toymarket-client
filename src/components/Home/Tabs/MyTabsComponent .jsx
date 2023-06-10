@@ -19,17 +19,15 @@ const MyTabsComponent = () => {
     setSelectedTab(category);
   };
 
-  const handleButtonClick = (toy) => {
-    // Perform the desired action when the button is clicked
-    console.log(`Button clicked for toy: ${toy.name}`);
-  };
+
 
   return (
     <div className="container mx-auto mt-8">
+      <div className="divider my-24"><p className='text-2xl font-bold'>Featured<span className='text-red-600 font-extrabold'> Subcategory </span>Products</p></div>
       <Tabs>
         <TabList className="flex justify-center">
           {categories.map((category, index) => (
-            <Tab key={index} onClick={() => handleTabClick(category)}>
+            <Tab key={index}>
               {category}
             </Tab>
           ))}

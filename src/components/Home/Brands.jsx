@@ -1,7 +1,9 @@
 import React from 'react';
 
 const Brands = () => {
-  return (
+  return (<>
+  <div className="divider my-24"><p className='text-2xl font-bold'>Our <span className='text-red-600 font-extrabold'>Brands </span></p></div>
+
     <div className="hero min-h-screen mt-16" style={{backgroundImage: `url(https://img.creator-prod.zmags.com/assets/images/6478e1b6b6fc7c5ba758645d.png?im=Resize,width=4011)`}}> 
      
         <div className='grid grid-cols-2'>
@@ -40,6 +42,7 @@ const Brands = () => {
    
 
     </div>
+    </>
   );
 };
 
