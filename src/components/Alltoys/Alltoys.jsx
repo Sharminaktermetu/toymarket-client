@@ -17,7 +17,7 @@ const Alltoys = () => {
   const handleSearch = () => {
     // Filter the toys array based on the search query
     const filteredToys = toys.filter(toy =>
-      toy.name.toLowerCase().includes(searchQuery.toLowerCase())
+      toy.toyname.toLowerCase().includes(searchQuery.toLowerCase())
     );
 
     // Update the toys state with the filtered toys
